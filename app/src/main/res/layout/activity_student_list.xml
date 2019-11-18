@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activities.StudentListActivity">
+
+    <ImageView
+        android:id="@+id/ic_back_student_list"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:src="@drawable/ic_left"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:fontFamily="@font/open_sans"
+        android:id="@+id/title_student_list"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="72dp"
+        android:gravity="center_vertical"
+        android:text="Student"
+        android:textColor="@color/colorAccent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <ImageButton
+        android:id="@+id/btn_new_student"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginEnd="@dimen/margin_xlarge"
+        android:layout_toStartOf="@id/btn_import_student"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_add_student" />
+
+    <ImageButton
+        android:id="@+id/btn_import_student"
+        android:layout_width="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:src="@drawable/ic_import_student" />
+
+    <TextView
+        android:layout_below="@id/title_student_list"
+        android:id="@+id/divider_student_list"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_student_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_student_list"
+        android:clipToPadding="false" />
+
+    <TextView
+        android:id="@+id/tv_no_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:text="No Student"
+        android:textColor="@color/disabled_text"
+        android:textSize="@dimen/text_heading_1x"
+        android:textStyle="bold" />
+
+</RelativeLayout>

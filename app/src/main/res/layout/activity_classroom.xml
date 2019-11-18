@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".activities.ClassroomActivity">
+
+    <ImageView
+        android:id="@+id/ic_back_classroom"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:src="@drawable/ic_left"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:id="@+id/title_classroom"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="72dp"
+        android:gravity="center_vertical"
+        android:fontFamily="@font/open_sans"
+        android:text="Classroom"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/colorAccent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_new_classroom"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:fontFamily="@font/roboto_button"
+        android:layout_marginTop="@dimen/margin_small"
+        android:textStyle="bold"
+        android:text="Add"
+        app:icon="@drawable/ic_add_classroom"
+        app:iconGravity="textStart"
+        app:iconPadding="@dimen/margin_medium_2" />
+
+    <TextView
+        android:layout_below="@id/title_classroom"
+        android:id="@+id/divider_classroom_list"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_classroom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_classroom"
+        android:clipToPadding="false" />
+
+</RelativeLayout>

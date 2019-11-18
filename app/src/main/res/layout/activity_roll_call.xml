@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".activities.RollCallActivity">
+
+    <ImageView
+        android:id="@+id/ic_back_roll_call"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:src="@drawable/ic_left"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:id="@+id/title_roll_call"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="72dp"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center_vertical"
+        android:text="Roll Call"
+        android:textColor="@color/colorAccent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel_roll_call"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:fontFamily="@font/roboto_button"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="Cancel"
+        app:icon="@drawable/ic_cancel"
+        app:iconGravity="textStart"
+        app:iconPadding="@dimen/margin_medium_2" />
+
+    <TextView
+        android:layout_below="@id/title_roll_call"
+        android:id="@+id/divider_roll_call"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_roll_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:cardElevation="@dimen/card_default_elevation"
+        android:visibility="visible"
+        app:cardMaxElevation="@dimen/card_rising_elevation"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_medium_3"
+            android:paddingRight="@dimen/margin_medium_3"
+            android:paddingTop="@dimen/margin_medium"
+            android:paddingBottom="@dimen/margin_medium">
+
+            <TextView
+                android:id="@+id/tv_roll_roll_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_student_roll"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/secondary_text"
+                android:textStyle="bold|italic"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <TextView
+                android:id="@+id/tv_name_roll_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/default_student_name"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_heading_1x"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Present?"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/text_regular_3x" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_small"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:weightSum="2">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_weight="1"
+                    android:id="@+id/btn_no_roll_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="No"
+                    android:fontFamily="@font/roboto_button"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    android:id="@+id/btn_yes_roll_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="Yes"
+                    android:fontFamily="@font/roboto_button"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/ll_done"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="@dimen/margin_medium_2">
+
+        <TextView
+            android:id="@+id/tv_done_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:text="Roll Call Complete"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_heading_1x"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_icon_done"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:cardElevation="@dimen/card_default_elevation"
+            app:cardMaxElevation="@dimen/card_rising_elevation"
+            app:cardUseCompatPadding="false"
+            app:cardCornerRadius="48dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_done"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:id="@+id/btn_done_roll_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:fontFamily="@font/roboto_button"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

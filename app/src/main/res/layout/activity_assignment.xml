@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activities.AssignmentActivity">
+
+    <ImageView
+        android:id="@+id/ic_back_assignment"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:src="@drawable/ic_left"
+        android:tint="@color/colorAccent"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:id="@+id/title_assignment_list"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="72dp"
+        android:gravity="center_vertical"
+        android:fontFamily="@font/roboto"
+        android:text="Assignment"
+        android:textColor="@color/colorAccent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_new_assignment"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_button"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="Add"
+        app:icon="@drawable/ic_assignment_add"
+        app:iconGravity="textStart"
+        app:iconPadding="@dimen/margin_medium_2" />
+
+    <TextView
+        android:layout_below="@id/title_assignment_list"
+        android:id="@+id/divider_assignment_list"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_assignment_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_assignment_list"
+        android:clipToPadding="false" />
+
+    <TextView
+        android:id="@+id/tv_no_assignment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:maxLines="1"
+        android:fontFamily="@font/roboto"
+        android:visibility="gone"
+        android:text="No Assignments"
+        android:textColor="@color/disabled_text"
+        android:textSize="@dimen/text_heading_1x"
+        android:textStyle="bold" />
+
+</RelativeLayout>

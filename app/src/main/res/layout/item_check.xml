@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_medium"
+    android:gravity="left"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_check_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium_2"
+        android:background="@drawable/border_textview"
+        android:text="@string/default_student_roll"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_regular"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_check_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_check_roll"
+        android:layout_alignStart="@id/tv_check_roll"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:text="@string/default_student_name"
+        android:fontFamily="@font/open_sans"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_heading_1x" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_complete_check"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:clickable="false"
+        android:text="Complete"
+        android:fontFamily="@font/roboto_button"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_tiny" />
+
+</RelativeLayout>

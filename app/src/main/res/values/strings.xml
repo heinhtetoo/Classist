@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Classist</string>
+
+    <string name="app_moto">Classroom Assistant Application</string>
+
+    <string name="default_greeting">Hello, User</string>
+    <string name="default_no">0</string>
+    <string name="default_module_no">Module No</string>
+    <string name="default_module_name">Module Name</string>
+    <string name="default_initial_name">HH</string>
+    <string name="default_student_name">Student</string>
+    <string name="default_student_roll">Roll No</string>
+    <string name="default_month">This Month</string>
+    <string name="default_class">Class</string>
+
+    <string name="input_schedule">Input Schedule</string>
+    <string name="update_schedule">Update Schedule</string>
+
+    <string name="auth_loading">Authenticating&#8230;</string>
+    <string name="file_loading">Loading&#8230;</string>
+
+    <string name="date_created">Date Created</string>
+    <string name="attendance">Attendance</string>
+    <string name="no_student">No Student</string>
+    <string name="no_records">No Records</string>
+    <string name="roll_call_complete">Complete</string>
+
+    <string name="confirm_logout">Are you sure to Logout?</string>
+    <string name="confirm_input_schedule">Are you sure to save this schedule?</string>
+
+    <string name="sign_in_state_key">heinhtetoo.myclass.USER_SIGN_IN_STATE_KEY</string>
+    <string name="account_id_key">heinhtetoo.myclass.USER_LOGIN_ACCOUNT_ID_KEY</string>
+    <string name="user_pref_file_key">heinhtetoo.myclass.USER_REF_FILE_KEY</string>
+</resources>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    android:background="@android:color/white"
+    tools:context=".activities.UserProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="640dp"
+        android:background="@drawable/bg_half_circle"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ic_back_user_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:src="@drawable/ic_left"
+                android:tint="@android:color/white"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:visibility="gone"
+                android:layout_alignParentStart="true"/>
+
+            <!--<com.google.android.material.card.MaterialCardView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                app:cardCornerRadius="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_alignParentTop="true"
+                android:visibility="gone"
+                app:elevation="@dimen/card_default_elevation"
+                app:cardMaxElevation="@dimen/card_rising_elevation">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_launcher_foreground"/>
+
+            </com.google.android.material.card.MaterialCardView>-->
+
+            <LinearLayout
+                android:id="@+id/ll_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="end"
+                android:layout_marginEnd="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans"
+                    android:maxLines="2"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_heading_2x"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/app_moto"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_regular"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_google_login"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_welcome"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="320dp"
+                android:fontFamily="@font/roboto_button"
+                android:text="Sign in with Google"
+                android:visibility="visible"
+                app:icon="@drawable/ic_google_logo"
+                app:iconPadding="@dimen/margin_medium"
+                app:strokeColor="@color/colorAccent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_profile_holder"
+                android:layout_width="124dp"
+                android:layout_height="124dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="96dp"
+                android:visibility="visible"
+                app:cardCornerRadius="64dp"
+                app:cardElevation="@dimen/card_rising_elevation"
+                app:cardMaxElevation="@dimen/card_rising_elevation">
+
+                <ImageView
+                    android:id="@+id/iv_profile"
+                    android:src="@mipmap/ic_launcher_foreground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_profile_holder"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:text="Hein Htet Oo"
+                android:fontFamily="@font/open_sans"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_heading_1_5x"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <!--<TextView
+                android:id="@+id/tv_user_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_username"
+                android:layout_centerHorizontal="true"
+                android:text="Lecturer"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_regular_3x"
+                android:visibility="gone" />-->
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_contact_holder"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tv_username"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_xlarge"
+                android:text="Contact Info"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/text_small"
+                android:textStyle="bold|italic" />
+
+            <LinearLayout
+                android:id="@+id/ll_contact_info_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/margin_medium_3"
+                android:paddingStart="@dimen/margin_medium_3"
+                android:layout_below="@id/tv_contact_holder"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="@dimen/margin_tiny"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:drawableStart="@drawable/ic_email"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_medium_3"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="@dimen/margin_medium"
+                    android:text="Unavailable"
+                    android:textSize="@dimen/text_tiny"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="@dimen/margin_tiny"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_medium_3"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:fontFamily="@font/roboto"
+                    android:drawablePadding="@dimen/margin_medium"
+                    android:text="Unavailable"
+                    android:textSize="@dimen/text_small"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_contact_info_holder"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_marginBottom="@dimen/margin_medium_2"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_default_elevation"
+                app:cardMaxElevation="@dimen/card_rising_elevation"
+                app:cardUseCompatPadding="true"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/margin_medium"
+                    android:paddingBottom="@dimen/margin_medium"
+                    android:paddingStart="@dimen/margin_medium_2"
+                    android:paddingEnd="@dimen/margin_medium_2">
+
+                    <TextView
+                        android:id="@+id/tv_schedule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Schedule"
+                        android:fontFamily="@font/open_sans"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_heading_1x"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_below="@id/tv_schedule"
+                        android:layout_alignEnd="@id/tv_schedule"
+                        android:id="@+id/divider_schedule"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/colorAccent"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginBottom="@dimen/margin_medium"/>
+
+                    <TextView
+                        android:id="@+id/tv_description"
+                        android:layout_below="@id/divider_schedule"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:layout_height="wrap_content"
+                        android:text="Timetable information will be used in Your Dashboard and Alert you about currend period and the upcoming one"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="@dimen/text_regular" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_below="@id/tv_description"
+                        android:layout_alignParentEnd="true"
+                        android:id="@+id/btn_input_schedule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:text="@string/input_schedule"
+                        app:iconGravity="textStart"
+                        android:fontFamily="@font/roboto_button"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        app:iconPadding="@dimen/margin_medium_2"
+                        app:icon="@drawable/ic_roll_call"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/ll_button"
+                android:visibility="gone"
+                android:layout_alignEnd="@id/cv_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/cv_schedule"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_manage"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    android:fontFamily="@font/roboto_button"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:text="Manage"
+                    android:visibility="gone" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_logout"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:fontFamily="@font/roboto_button"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:text="Logout"
+                    android:visibility="visible"
+                    app:strokeColor="@color/colorAccent" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
