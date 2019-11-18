@@ -1,3 +1,3 @@
 # Classist
 Classroom Assistant Application (B.Sc Term-paper Project)
-![Dashboard](screenshots/Home.JPG)
+![Dashboard](screenshots/Home.jpg)
